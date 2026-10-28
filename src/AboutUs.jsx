@@ -2,7 +2,7 @@ import "./AboutUs.css";
 
 function AboutUs() {
   return (
-    <section className="about-us" aria-labelledby="about-title">
+    <div className="about-us-container" aria-labelledby="about-title">
       <p className="eyebrow">Rooted in care</p>
       <h2 id="about-title">Bring a little paradise home</h2>
       <p>
@@ -19,7 +19,7 @@ function AboutUs() {
         <span>Planet-friendly packing</span>
         <span>Growing guidance</span>
       </div>
-    </section>
+    </div>
   );
 }
 

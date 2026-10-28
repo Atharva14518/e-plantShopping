@@ -1,3 +1,39 @@
+.product-navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 0 max(1.25rem, calc((100% - 1220px) / 2));
+  background: rgba(244, 245, 239, 0.94);
+  border-bottom: 1px solid #dfe3d8;
+  color: #173d2b;
+  backdrop-filter: blur(12px);
+}
+
+.product-navbar .brand,
+.navbar-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.navbar-link:hover {
+  background: #e4eadc;
+}
+
+.navbar-cart-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
 .products-page {
   width: min(1180px, calc(100% - 2.5rem));
   margin: 0 auto;

@@ -5,7 +5,7 @@ Paradise Nursery is a responsive React and Redux shopping cart application for a
 ## Features
 
 - Landing page with Paradise Nursery company information and a **Get Started** button
-- Nine houseplants organized into three categories
+- Eighteen unique houseplants organized into three categories, with six plants in each category
 - Plant cards with an image, name, price, description, and **Add to Cart** button
 - Dynamic shopping-cart badge showing the total number of plants
 - Redux Toolkit cart state with add, remove, and quantity-update reducers

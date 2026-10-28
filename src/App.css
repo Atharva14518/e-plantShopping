@@ -8,6 +8,11 @@
   min-height: 100vh;
   overflow: hidden;
   color: white;
+}
+
+.background-image {
+  position: absolute;
+  inset: 0;
   background-image: url("./assets/landing-forest.jpg");
   background-position: center;
   background-size: cover;
@@ -17,6 +22,7 @@
 .landing-overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background:
     radial-gradient(circle at 78% 28%, rgba(82, 139, 80, 0.1), transparent 36%),
     linear-gradient(90deg, rgba(4, 26, 18, 0.92), rgba(5, 35, 24, 0.67) 52%, rgba(3, 24, 17, 0.58));
@@ -24,7 +30,7 @@
 
 .landing-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(360px, 0.8fr);
   align-items: center;
@@ -48,7 +54,7 @@
   max-width: 690px;
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(4rem, 9vw, 7.8rem);
+  font-size: clamp(3.6rem, 7vw, 6.7rem);
   font-weight: 500;
   letter-spacing: -0.065em;
   line-height: 0.86;
@@ -249,7 +255,7 @@
     font-size: clamp(3.8rem, 20vw, 5.8rem);
   }
 
-  .about-us {
+  .about-us-container {
     padding: 1.4rem;
   }
 }
