@@ -1,0 +1,255 @@
+.app-shell {
+  min-height: 100vh;
+  background: #f4f5ef;
+}
+
+.landing-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  color: white;
+  background-image: url("./assets/landing-forest.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.landing-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 78% 28%, rgba(82, 139, 80, 0.1), transparent 36%),
+    linear-gradient(90deg, rgba(4, 26, 18, 0.92), rgba(5, 35, 24, 0.67) 52%, rgba(3, 24, 17, 0.58));
+}
+
+.landing-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.8fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 7rem);
+  width: min(1180px, calc(100% - 3rem));
+  min-height: calc(100vh - 88px);
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.hero-kicker {
+  margin: 0 0 1rem;
+  color: #c9efaf;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 690px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(4rem, 9vw, 7.8rem);
+  font-weight: 500;
+  letter-spacing: -0.065em;
+  line-height: 0.86;
+}
+
+.hero-copy {
+  max-width: 570px;
+  margin: 2rem 0;
+  color: rgba(255, 255, 255, 0.83);
+  font-size: clamp(1rem, 2vw, 1.22rem);
+  line-height: 1.7;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  min-height: 52px;
+  padding: 0.8rem 1.4rem;
+  border: 0;
+  border-radius: 999px;
+  background: #d6f2b8;
+  color: #143c2b;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  background: #e6ffd0;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.site-header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(1220px, calc(100% - 2.5rem));
+  height: 88px;
+  margin: 0 auto;
+}
+
+.app-shell .site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 0 max(1.25rem, calc((100% - 1220px) / 2));
+  background: rgba(244, 245, 239, 0.92);
+  border-bottom: 1px solid #dfe3d8;
+  backdrop-filter: blur(12px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.brand-mark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50% 50% 50% 12%;
+  background: #cdecaf;
+  color: #17452f;
+  font-family: Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.brand strong,
+.brand small {
+  display: block;
+  line-height: 1;
+}
+
+.brand strong {
+  font-family: Georgia, serif;
+  font-size: 1.12rem;
+}
+
+.brand small {
+  margin-top: 0.25rem;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.site-header nav button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 0.9rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.landing-page .site-header nav button:hover,
+.landing-page .site-header nav button.active {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.app-shell .site-header {
+  color: #173d2b;
+}
+
+.app-shell .site-header nav button:hover,
+.app-shell .site-header nav button.active {
+  background: #e4eadc;
+}
+
+.cart-link svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.cart-badge {
+  display: grid;
+  min-width: 22px;
+  height: 22px;
+  place-items: center;
+  padding: 0 0.25rem;
+  border-radius: 99px;
+  background: #d6f2b8;
+  color: #143c2b;
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+@media (max-width: 850px) {
+  .landing-content {
+    grid-template-columns: 1fr;
+    padding: 4rem 0 5rem;
+  }
+
+  .hero h1 {
+    max-width: 580px;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-header {
+    width: calc(100% - 1.5rem);
+  }
+
+  .app-shell .site-header {
+    width: 100%;
+    padding: 0 0.75rem;
+  }
+
+  .brand span:last-child,
+  .site-header nav button:not(.cart-link) {
+    display: none;
+  }
+
+  .site-header nav button {
+    padding: 0.65rem;
+  }
+
+  .landing-content {
+    width: calc(100% - 1.5rem);
+  }
+
+  .hero h1 {
+    font-size: clamp(3.8rem, 20vw, 5.8rem);
+  }
+
+  .about-us {
+    padding: 1.4rem;
+  }
+}
